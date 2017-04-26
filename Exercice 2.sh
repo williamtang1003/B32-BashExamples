@@ -1,8 +1,8 @@
 #!/bin/bash
 
 menu(){
-	echo "a- Chercher un mot dans le dictionnaire\n"
-	echo "b- ne rien faire...\n"
+	echo "a- Chercher un mot dans le dictionnaire"
+	echo "b- ne rien faire..."
 	echo "q- quitter le programme"
 }
 
@@ -15,6 +15,14 @@ read lettre
 while test $lettre != q
 do
 	clear
+
+if test $lettre = a
+then	
+	./Exercice\ 1BASE.sh
+	read random
+	clear
+fi
+
 	menu 
 	read lettre
 done
