@@ -11,6 +11,7 @@ do
 
 read -p "Entrez un mot :" mot
 #declare -i reponse
+#utiliser les apostrophes inversées pour stocker le résultat d'une exécution dans une variable
 reponse=`wget -qO - http://dictionary.objectif8.com/exists.php?word=$mot`
 
 if test $reponse -eq 1
