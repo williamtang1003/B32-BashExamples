@@ -5,6 +5,10 @@
 
 #wget -qO - http://dictionary.objectif8.com/exists.php?word=
 
+for ((i=0;;i++))
+do
+
+
 read -p "Entrez un mot :" mot
 #declare -i reponse
 reponse=`wget -qO - http://dictionary.objectif8.com/exists.php?word=$mot`
@@ -18,3 +22,5 @@ fi
 
 printf "\n\n"
 
+echo $mot >> recherche.txt
+done
